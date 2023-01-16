@@ -1,0 +1,142 @@
+.container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+ margin: 0 auto 30px auto;
+ font-size: 70px;
+ text-shadow: 3px 1px 2px rgb(93 122 93);
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+form .input {
+    width: 450px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form .input input{
+    width: 400px;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-sizing: border-box;
+    background: white;
+    font-size: 26px;
+}
+
+form .input button {
+    width: 50px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: #c4447a;
+    background: #f7fffe;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 32px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form .input button:hover {
+    background: #c4447a;
+    color: #f7fffe;
+}
+
+form .select {
+    width: 130px;
+    height: 100%;
+}
+
+form .select select {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c4447a;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    height: 50px;
+}
+
+.todo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.done {
+    idth: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    text-decoration: line-through;
+    opacity: 0.5;
+    color: black;
+}
+
+.one {
+    width: calc(100% - 100px);
+    height: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    text-align: left;
+}
+
+.two {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(11, 212, 162);
+    cursor: pointer;
+}
+
+.three {
+    width: 50px;
+    height: 100%;
+    background: #f83a3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

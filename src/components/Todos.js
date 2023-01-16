@@ -32,7 +32,7 @@ const Todos = () => {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
             <header>
                 <h1>Todo List</h1>
             </header>
@@ -53,10 +53,10 @@ const Todos = () => {
             <main>
                 {todos.map((item, index) => {
                     return (
-                        <div key={index}>
-                            <span>{item.todo}</span>
-                            <span onClick={() => done(item.todo, index)}><FaCheck /></span>
-                            <span onClick={() => remove(item.todo)}><FaTrash /></span>
+                        <div className={item.check ? styles.done : styles.todo} key={index}>
+                            <span className={styles.one}>{item.todo}</span>
+                            <span className={styles.two} onClick={() => done(item.todo, index)}><FaCheck /></span>
+                            <span className={styles.three} onClick={() => remove(item.todo)}><FaTrash /></span>
                         </div>
                     )
                 })}
