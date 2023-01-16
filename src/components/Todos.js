@@ -3,10 +3,19 @@ import { FaPlusSquare, FaAngleDown, FaCheck, FaTrash } from "react-icons/fa";
 import styles from "./Todos.module.css";
 
 
+const getLocalStorage = () => {
+    const get = JSON.parse(localStorage.getItem("todos"));
+    if(get){
+        return get
+    } else {
+        return []
+    }
+}
+
 const Todos = () => {
 
     const [value, setValue] = useState("");
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState(getLocalStorage());
     const [filter, setFilter] = useState("all");
     const [filtertodos, setFiltertodos] = useState(todos);
 
@@ -22,6 +31,8 @@ const Todos = () => {
             const uncompletedTodoes = todos.filter(item => item.check === false);
             setFiltertodos(uncompletedTodoes);
         }
+
+        localStorage.setItem("todos" , JSON.stringify(todos));
     },[todos, filter])
 
     const clickHandler = (e) => {
