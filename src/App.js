@@ -1,8 +1,9 @@
+import Todos from "./components/Todos";
 
 function App() {
   return (
     <div>
-      todo list
+      <Todos />
     </div>
   );
 }
